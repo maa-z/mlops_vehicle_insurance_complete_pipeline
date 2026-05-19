@@ -1,0 +1,64 @@
+work flow
+-----------------------
+
+1. notebook 
+getting data , experiments 
+
+2. logger and exception  
+3. configuration (mongo_db_connection)
+4. constants
+5.  config_entity (file path name that will used by each step) and artifact_entity ( each steps return class)
+6. components 
+7. pipeline
+8. app.py
+
+
+
+mongodbPassword = "vdEZnwhYgpL2siuR"
+mongodbusername = "thisishaque3_db_user"
+
+connectionString = mongodb+srv://thisishaque3_db_user:<db_password>@cluster0.4ok2gwk.mongodb.net/?appName=Cluster0
+
+
+
+Selecting Your Virtual Environment as Jupyter Kernel
+This is a very common step! You need to register your virt environment as a Jupyter kernel first. Here's how:
+
+Step 1 — Install ipykernel inside your virtual environment
+Make sure your virt env is activated in Git Bash, then run:
+
+bash
+pip install ipykernel
+Step 2 — Register the kernel
+bash
+python -m ipykernel install --user --name=virt --display-name "Python (virt)"
+--name=virt → internal kernel name
+--display-name "Python (virt)" → what you'll see in the kernel picker
+Step 3 — Select the kernel in VS Code
+Since you have mongoDB_demo.ipynb open in VS Code:
+
+Look at the top-right corner of the notebook — you'll see a button showing the current kernel (e.g., Python 3.x.x)
+Click on it → a dropdown appears at the top
+Select "Python (virt)" from the list
+If you don't see it, click "Select Another Kernel…" → "Jupyter Kernel…" and it should appear there.
+
+Verify it worked
+Run this in a notebook cell:
+
+python
+import sys
+print(sys.executable)
+You should see a path pointing to your virt environment, something like:
+
+D:/mlops/project/own/virt/Scripts/python.exe
+TIP
+
+You only need to do Steps 1 & 2 once. After that, Python (virt) will always be available as a kernel option for any notebook.
+
+
+
+
+
+
+ecr = vehicleproj
+ecr_URI = 956076205820.dkr.ecr.us-east-1.amazonaws.com/vehicleproj
